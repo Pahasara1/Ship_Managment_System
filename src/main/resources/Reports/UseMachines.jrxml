@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="UseMachines" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="44d32a1b-cac9-4c5b-b550-65ad0e2353f5">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[select * from usemachinesconformation]]>
+	</queryString>
+	<field name="Machine_Id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Machine_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Machine_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usemachinesconformation"/>
+	</field>
+	<field name="Material_Id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Material_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Material_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usemachinesconformation"/>
+	</field>
+	<field name="Employee_Nic" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Employee_Nic"/>
+		<property name="com.jaspersoft.studio.field.label" value="Employee_Nic"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usemachinesconformation"/>
+	</field>
+	<field name="Time" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Time"/>
+		<property name="com.jaspersoft.studio.field.label" value="Time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usemachinesconformation"/>
+	</field>
+	<field name="Date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Date"/>
+		<property name="com.jaspersoft.studio.field.label" value="Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usemachinesconformation"/>
+	</field>
+	<group name="Machine_Id">
+		<groupExpression><![CDATA[$F{Machine_Id}]]></groupExpression>
+	</group>
+	<group name="Material_Id">
+		<groupExpression><![CDATA[$F{Material_Id}]]></groupExpression>
+	</group>
+	<group name="Employee_Nic">
+		<groupExpression><![CDATA[$F{Employee_Nic}]]></groupExpression>
+	</group>
+	<group name="Time">
+		<groupExpression><![CDATA[$F{Time}]]></groupExpression>
+	</group>
+	<group name="Date">
+		<groupExpression><![CDATA[$F{Date}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<staticText>
+				<reportElement x="87" y="-24" width="389" height="60" uuid="a7935f21-b5ed-48a8-a590-350148708889"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Sitka Small" size="45" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Machine Details]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-25" y="31" width="605" height="1" uuid="5b41ea56-b0a8-4413-86ea-e9b12101d199"/>
+			</line>
+			<line>
+				<reportElement x="-23" y="104" width="605" height="1" uuid="313bbaec-e89f-4a2f-96a9-9d0d0c1b887f"/>
+			</line>
+			<staticText>
+				<reportElement x="-7" y="80" width="87" height="20" uuid="617e923a-c113-4543-92ce-f449c46244fa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c98d9a88-1580-40a8-8347-bfd56c03500e"/>
+				</reportElement>
+				<text><![CDATA[Machine_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="80" width="100" height="20" uuid="4330dba0-1f1f-4dbb-9aaf-5755b53ce9ed">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21962c68-199a-45d5-84af-8f5313e27de8"/>
+				</reportElement>
+				<text><![CDATA[Material_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="80" width="100" height="20" uuid="350bcc35-ea7c-47cd-91c4-d2f5382e7dfb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="42b551ee-0373-4369-a30e-82713d26c101"/>
+				</reportElement>
+				<text><![CDATA[Employee_Nic]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="80" width="100" height="20" uuid="8193eddd-6e9c-46fd-9c90-8f6642809599">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a104fa75-8446-46a9-aee8-507e572ee961"/>
+				</reportElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="80" width="100" height="20" uuid="1464f998-8543-4b7d-9dd4-97cc7bc20c28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd846514-4c42-498f-8847-75fdb78c52a2"/>
+				</reportElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-23" y="74" width="605" height="1" uuid="c3dc55cf-b0ed-44eb-b1c3-49cc42ebba93"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="-3" y="4" width="87" height="20" uuid="e668ae2a-e759-458c-93b2-bf5dd371ad23">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c98d9a88-1580-40a8-8347-bfd56c03500e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Machine_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="3" width="100" height="21" uuid="f1174dd0-1b89-4c1a-a754-3686403103a6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21962c68-199a-45d5-84af-8f5313e27de8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Material_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="4" width="100" height="18" uuid="11babb45-67dd-45cb-9eb2-d63903637ed5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="42b551ee-0373-4369-a30e-82713d26c101"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Employee_Nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="357" y="3" width="100" height="19" uuid="2eac7398-766a-44f9-8c56-0fa9ee8da6bd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a104fa75-8446-46a9-aee8-507e572ee961"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="2" width="100" height="21" uuid="dd762934-f805-4b03-8fcf-ab35df3a8738">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd846514-4c42-498f-8847-75fdb78c52a2"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="59" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement x="280" y="83" width="156" height="24" uuid="a24caeb1-18fb-4215-8c87-9027eb52f111"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Captain Signature]]></text>
+			</staticText>
+			<line>
+				<reportElement x="442" y="100" width="118" height="1" uuid="58a0db67-eec1-4010-810a-eacce12008c2"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="60" width="40" height="18" uuid="7cdfc298-7fe2-465d-b392-2545cd09dff3"/>
+				<text><![CDATA[Date -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="88" width="40" height="18" uuid="2243ed20-0b92-4fca-9b93-3c08b474431d"/>
+				<text><![CDATA[Time -]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="67" y="89" width="100" height="17" uuid="24d75d9d-e2cf-45c5-81ac-e46fdf68d270"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="67" y="59" width="100" height="20" uuid="f6c0b258-aeaa-4553-bc36-f4fb725ee05a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

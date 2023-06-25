@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1203.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.MachineManagementFormContraller">
+   <children>
+      <AnchorPane cache="true" layoutX="247.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="966.0" style="-fx-background-color: White;">
+         <children>
+            <AnchorPane layoutX="-5.0" layoutY="-65.0" prefHeight="67.0" prefWidth="974.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="67.0" layoutX="-8.0" layoutY="-2.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="982.0">
+                     <effect>
+                        <InnerShadow />
+                     </effect></Rectangle>
+                  <Label layoutX="58.0" layoutY="16.0" prefHeight="26.0" prefWidth="76.0" text="Date :" textFill="#868686">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtDate1" layoutX="135.0" layoutY="17.0" prefHeight="35.0" prefWidth="221.0" text="Date" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="654.0" layoutY="17.0" prefHeight="26.0" prefWidth="76.0" text="Time : " textFill="#868686">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtTime1" layoutX="727.0" layoutY="17.0" prefHeight="35.0" prefWidth="193.0" text="Time" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="966.0" style="-fx-background-color: White;">
+               <children>
+                  <Line endX="865.0" layoutX="101.0" layoutY="67.0" startX="-100.0" stroke="#f50202" />
+                  <ImageView fitHeight="308.0" fitWidth="850.0" layoutX="67.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/images.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="252.0" layoutY="9.0" prefHeight="54.0" prefWidth="445.0" text="Machine Management Form">
+                     <font>
+                        <Font name="Sylfaen" size="37.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblMachine" layoutX="66.0" layoutY="256.0" opacity="0.56" prefHeight="332.0" prefWidth="850.0">
+                     <columns>
+                        <TableColumn fx:id="colMachineId" prefWidth="91.0" text="Machine Id" />
+                        <TableColumn fx:id="colMachineName" prefWidth="231.0" text="Machine Name" />
+                        <TableColumn fx:id="colQuality" prefWidth="148.0" text="Quality" />
+                        <TableColumn fx:id="colRepairCount" prefWidth="128.0" text="Repair Count" />
+                        <TableColumn fx:id="colDate" prefWidth="132.0" text="Date" />
+                        <TableColumn fx:id="colTime" prefWidth="119.0" text="Time" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="txtMachineId" layoutX="67.0" layoutY="105.0" promptText="Machine Id" />
+                  <TextField fx:id="txtMachineName" layoutX="238.0" layoutY="105.0" prefHeight="25.0" prefWidth="273.0" promptText="Machine Name" />
+                  <TextField fx:id="txtQuality" layoutX="547.0" layoutY="105.0" promptText="Quality" />
+                  <TextField fx:id="txtRepairCount" layoutX="67.0" layoutY="157.0" prefHeight="25.0" prefWidth="85.0" promptText="Count" />
+                  <TextField fx:id="txtDate" disable="true" layoutX="238.0" layoutY="154.0" />
+                  <TextField fx:id="txtTime" disable="true" layoutX="547.0" layoutY="157.0" />
+                  <TextField fx:id="txtSearch" layoutX="70.0" layoutY="210.0" prefHeight="25.0" prefWidth="577.0" promptText="Search" />
+                  <Label layoutX="67.0" layoutY="140.0" prefHeight="17.0" prefWidth="85.0" text="Repair Count">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="238.0" layoutY="138.0" prefHeight="17.0" prefWidth="85.0" text="Repair Date">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="547.0" layoutY="138.0" prefHeight="17.0" prefWidth="68.0" text="Repair Time">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="67.0" layoutY="87.0" prefHeight="17.0" prefWidth="68.0" text="Machine Id">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="238.0" layoutY="87.0" prefHeight="17.0" prefWidth="94.0" text="Machine Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="547.0" layoutY="87.0" prefHeight="17.0" prefWidth="68.0" text="Quality">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="775.0" layoutY="102.0" mnemonicParsing="false" onAction="#btnNewOnAction" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: Orange;" text="+ New">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDelete" layoutX="775.0" layoutY="143.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: Red;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnsave" layoutX="775.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: Green;" text="Save">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Line endX="865.0" layoutX="104.0" layoutY="1.0" startX="-110.5" startY="7.62939453125E-6" />
+                  <Button fx:id="btnSearch" layoutX="653.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="Search" />
+               </children>
+            </AnchorPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="13.0" layoutX="-11.0" layoutY="619.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="980.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="620.0" layoutX="943.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="13.0" />
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="696.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="237.0">
+         <effect>
+            <InnerShadow />
+         </effect></Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0055a4" height="614.0" layoutX="17.0" layoutY="65.0" opacity="0.34" stroke="BLACK" strokeType="INSIDE" width="200.0">
+         <effect>
+            <InnerShadow />
+         </effect></Rectangle>
+      <Button fx:id="btnEmployees4" layoutX="53.0" layoutY="155.0" mnemonicParsing="false" onAction="#btnEmployeesOnAction" prefHeight="25.0" prefWidth="131.0" text="Employees">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnOrders4" layoutX="52.0" layoutY="195.0" mnemonicParsing="false" onAction="#btnOrdersOnAction" prefHeight="25.0" prefWidth="131.0" text="Orders">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnSupppliers4" layoutX="53.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnSuppliersOnAction" prefHeight="25.0" prefWidth="131.0" text="Suppliers">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnBuyers4" layoutX="54.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnBuyersOnAction" prefHeight="25.0" prefWidth="131.0" text="Buyers">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnMaterials4" layoutX="53.0" layoutY="318.0" mnemonicParsing="false" onAction="#btnMaterialsOnAction" prefHeight="25.0" prefWidth="131.0" text="Materials">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnMachines4" layoutX="53.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnMachinesOnAction" prefHeight="25.0" prefWidth="131.0" text="Machines">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReports4" layoutX="52.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnReportsOnAction" prefHeight="25.0" prefWidth="131.0" text="Daily Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnLogOut" layoutX="54.0" layoutY="621.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="31.0" prefWidth="85.0" text="Log Out">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnDashBoard2" layoutX="54.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="25.0" prefWidth="131.0" text="DashBoard">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="144.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/images.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnRefresh" layoutX="54.0" layoutY="581.0" mnemonicParsing="false" onAction="#btnRefreshOnAction" prefHeight="25.0" prefWidth="131.0" text="Refresh Table">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="91.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/machine.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

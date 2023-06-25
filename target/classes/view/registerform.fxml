@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="registerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1203.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegisterFormController">
+   <children>
+      <ImageView fx:id="btnCode" fitHeight="806.0" fitWidth="1203.0" layoutY="-106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/0x0.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="601.0" layoutX="113.0" layoutY="53.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" width="519.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Rectangle>
+      <Label layoutX="247.0" layoutY="53.0" prefHeight="66.0" prefWidth="263.0" text="Registeration" textFill="#fff300">
+         <font>
+            <Font name="Times New Roman Bold" size="45.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="184.0" layoutY="175.0" prefHeight="30.0" prefWidth="381.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="185.0" layoutY="155.0" prefHeight="16.0" prefWidth="94.0" text="Full Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="213.0" prefHeight="16.0" prefWidth="94.0" text="Possision" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="265.0" prefHeight="26.0" prefWidth="289.0" text="National Identy Card Number (Nic)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="317.0" prefHeight="26.0" prefWidth="129.0" text="E-Mail Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="434.0" prefHeight="26.0" prefWidth="67.0" text="Contact" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="rememberMe" layoutX="186.0" layoutY="504.0" mnemonicParsing="false" onAction="#rememberMeOnAction" text="Remember Me" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="btnRegister" disable="true" layoutX="224.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnRegisteOnAction" prefHeight="45.0" prefWidth="307.0" style="-fx-background-color: Red;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="txtPossision" layoutX="183.0" layoutY="231.0" prefHeight="30.0" prefWidth="381.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNic" layoutX="180.0" layoutY="287.0" prefHeight="30.0" prefWidth="381.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" layoutX="181.0" layoutY="339.0" prefHeight="30.0" prefWidth="381.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtContact" layoutX="184.0" layoutY="456.0" prefHeight="30.0" prefWidth="381.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnLogin" layoutX="476.0" layoutY="615.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="13.0" prefWidth="52.0" style="-fx-background-color: Orange;" text="LOG IN">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="txtPassword" layoutX="182.0" layoutY="397.0" prefHeight="30.0" prefWidth="178.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </PasswordField>
+      <PasswordField fx:id="txtPasswordConfirm" layoutX="383.0" layoutY="398.0" prefHeight="30.0" prefWidth="178.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </PasswordField>
+      <Label layoutX="183.0" layoutY="375.0" prefHeight="26.0" prefWidth="80.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="383.0" layoutY="376.0" prefHeight="26.0" prefWidth="154.0" text="Confirm Password" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Text layoutX="224.0" layoutY="631.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have an Allready Account  ?....">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNicCode" layoutX="415.0" layoutY="500.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="344.0" layoutY="501.0" prefHeight="26.0" prefWidth="67.0" text="Your Code" textFill="#00e6ff">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="96.0" layoutX="663.0" layoutY="514.0" startX="-100.0" />
+      <Line endX="9.0" endY="78.0" layoutX="752.0" layoutY="436.0" startX="9.0" startY="-204.0" />
+      <Text layoutX="745.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Code Should be entered as data during login" wrappingWidth="446.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

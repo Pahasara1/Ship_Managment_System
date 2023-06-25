@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1203.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DailyReportManagementFormController">
+   <children>
+      <AnchorPane cache="true" layoutX="247.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="966.0" style="-fx-background-color: White;">
+         <children>
+            <AnchorPane layoutX="-5.0" layoutY="-65.0" prefHeight="67.0" prefWidth="974.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="67.0" layoutX="-8.0" layoutY="-2.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="982.0">
+                     <effect>
+                        <InnerShadow />
+                     </effect></Rectangle>
+                  <Label layoutX="50.0" layoutY="18.0" prefHeight="26.0" prefWidth="76.0" text="Date :" textFill="#868686">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" layoutX="126.0" layoutY="18.0" prefHeight="35.0" prefWidth="237.0" text="Date" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="639.0" layoutY="17.0" prefHeight="26.0" prefWidth="76.0" text="Time" textFill="#868686">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="717.0" layoutY="18.0" prefHeight="35.0" prefWidth="186.0" text="Time" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="966.0" style="-fx-background-color: White;">
+               <children>
+                  <Line endX="865.0" layoutX="101.0" layoutY="67.0" startX="-100.0" stroke="#f50202" />
+                  <Label fx:id="txtDailyReport" layoutX="281.0" layoutY="9.0" prefHeight="54.0" prefWidth="325.0" text="Daily System Details">
+                     <font>
+                        <Font name="Sylfaen" size="37.0" />
+                     </font>
+                  </Label>
+                  <Line endX="865.0" layoutX="104.0" layoutY="1.0" startX="-110.5" startY="7.62939453125E-6" />
+                  <AnchorPane layoutX="35.0" layoutY="78.0" prefHeight="543.0" prefWidth="923.0">
+                     <children>
+                        <ComboBox fx:id="comBox" layoutX="707.0" layoutY="147.0" onAction="#comBoxOnAction" prefHeight="25.0" prefWidth="142.0" />
+                        <Label layoutX="707.0" layoutY="129.0" text="Select Another Details" textFill="#250afa">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnsave" layoutX="707.0" layoutY="92.0" mnemonicParsing="false" onAction="#txtBtnSaveOnAction" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: Green;" text="Save">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="299.0" fitWidth="846.0" layoutX="25.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/images.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnDelete" layoutX="709.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: Red;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="708.0" layoutY="15.0" mnemonicParsing="false" onAction="#btngeneratereportOnAction" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: Yellow;" text="Generate Report">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="tblReports" layoutX="25.0" layoutY="178.0" opacity="0.56" prefHeight="327.0" prefWidth="824.0">
+                          <columns>
+                            <TableColumn fx:id="colReportId" prefWidth="139.0" text="Report Id" />
+                            <TableColumn fx:id="colEmployeeNic" prefWidth="199.0" text="Employee Nic" />
+                              <TableColumn fx:id="colTemperature" prefWidth="290.0" text="Temperature Level" />
+                              <TableColumn fx:id="colMachineRunning" prefWidth="220.0" text="Machine Running Pressure" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txtReportId" layoutX="19.0" layoutY="37.0" prefHeight="25.0" prefWidth="122.0" promptText="Report Id" />
+                        <Label fx:id="lblReportId" layoutX="21.0" layoutY="20.0" prefHeight="17.0" prefWidth="62.0" text="Report Id">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNic" layoutX="21.0" layoutY="90.0" prefHeight="25.0" prefWidth="237.0" promptText="Employee Nic" />
+                        <Label fx:id="lblNic" layoutX="23.0" layoutY="72.0" prefHeight="17.0" prefWidth="131.0" text="Employee Nic Number">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtTemperature" layoutX="190.0" layoutY="38.0" prefHeight="25.0" prefWidth="175.0" promptText="Temperature Level" />
+                        <Label fx:id="lblTemperature" layoutX="191.0" layoutY="21.0" prefHeight="17.0" prefWidth="108.0" text="Temperature Level">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtOther" layoutX="429.0" layoutY="37.0" prefHeight="25.0" prefWidth="186.0" promptText="Machine Runner" />
+                        <Label fx:id="lblMachinePressure" layoutX="430.0" layoutY="21.0" prefHeight="17.0" prefWidth="149.0" text="Machine Runnng Pressure">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSearch" layoutX="23.0" layoutY="135.0" prefHeight="25.0" prefWidth="588.0" promptText="Search" />
+                        <Button fx:id="btnSearch" layoutX="616.0" layoutY="134.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="Search" />
+                        <Button layoutX="473.0" layoutY="84.0" mnemonicParsing="false" onAction="#btnNewOnAction" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: Orange;" text="+ New">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="13.0" layoutX="-3.0" layoutY="619.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="980.0" />
+               </children>
+            </AnchorPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="620.0" layoutX="943.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="13.0" />
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="696.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="237.0">
+         <effect>
+            <InnerShadow />
+         </effect></Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0055a4" height="614.0" layoutX="17.0" layoutY="65.0" opacity="0.34" stroke="BLACK" strokeType="INSIDE" width="200.0">
+         <effect>
+            <InnerShadow />
+         </effect></Rectangle>
+      <Button fx:id="btnEmployee2" layoutX="54.0" layoutY="152.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="25.0" prefWidth="131.0" text="Employees">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnOrders2" layoutX="54.0" layoutY="193.0" mnemonicParsing="false" onAction="#btnOrdersOnAction" prefHeight="25.0" prefWidth="131.0" text="Orders">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnSuppliers2" layoutX="52.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnSuppliersOnAction" prefHeight="25.0" prefWidth="131.0" text="Suppliers">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnBuyers2" layoutX="52.0" layoutY="276.0" mnemonicParsing="false" onAction="#buyersOnACtion" prefHeight="25.0" prefWidth="131.0" text="Buyers">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnMaterials2" layoutX="54.0" layoutY="317.0" mnemonicParsing="false" onAction="#btnMaterialsOnAction" prefHeight="25.0" prefWidth="131.0" text="Materials">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnMachines2" layoutX="53.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnMachinesOnAction" prefHeight="25.0" prefWidth="131.0" text="Machines">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReports2" layoutX="53.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnDailyReportsOnAction" prefHeight="25.0" prefWidth="131.0" text="Daily Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnLogOut" layoutX="54.0" layoutY="621.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="31.0" prefWidth="85.0" text="Log Out">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnDashBoard" layoutX="54.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="25.0" prefWidth="131.0" text="DashBoard">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="146.0" layoutY="621.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/images.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnRefresh" layoutX="53.0" layoutY="579.0" mnemonicParsing="false" onAction="#tbtnRefreshOnAction" prefHeight="25.0" prefWidth="131.0" text="Refresh Table">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="90.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/icons8-graph-report-48.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

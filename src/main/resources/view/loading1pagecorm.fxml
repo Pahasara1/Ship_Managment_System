@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loadingP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1203.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Loading1PageController">
+   <children>
+      <ImageView fitHeight="925.0" fitWidth="1385.0" layoutX="-171.0" layoutY="-60.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <image>
+            <Image url="@../assets/images/container-ship-6631117__480.jpg" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="loading" layoutX="357.0" layoutY="305.0" onDragDetected="#LoadingOnAction" prefHeight="18.0" prefWidth="588.0" progress="0.0">
+         <effect>
+            <DropShadow />
+         </effect></ProgressBar>
+      <Label layoutX="360.0" layoutY="263.0" prefHeight="49.0" prefWidth="225.0" text="Please Wait ....">
+         <font>
+            <Font name="Algerian" size="29.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="108.0" layoutY="-4.0" opacity="0.48" stroke="BLACK" strokeType="INSIDE" width="1203.0" />
+      <Text layoutX="671.0" layoutY="669.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo Holder Chains...." wrappingWidth="517.13671875">
+         <font>
+            <Font name="Bell MT Bold" size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="282.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R.H.P.M Services Management System ">
+         <font>
+            <Font name="Bell MT Bold" size="37.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

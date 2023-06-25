@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1203.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBoardController">
+   <children>
+      <AnchorPane cache="true" layoutX="237.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="976.0" style="-fx-background-color: White;">
+         <children>
+            <AnchorPane layoutX="-5.0" layoutY="-65.0" prefHeight="67.0" prefWidth="974.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="67.0" layoutX="3.0" layoutY="-2.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="982.0">
+                     <effect>
+                        <InnerShadow />
+                     </effect></Rectangle>
+                  <Label fx:id="date" layoutX="143.0" layoutY="16.0" prefHeight="32.0" prefWidth="271.0" text="Date" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time" layoutX="724.0" layoutY="18.0" prefHeight="32.0" prefWidth="168.0" text="Time" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="14.0" prefHeight="26.0" prefWidth="76.0" text="Date :" textFill="#868686">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="628.0" layoutY="17.0" prefHeight="26.0" prefWidth="76.0" text="Time :" textFill="#868686">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="99.0" layoutX="55.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="209.0">
+               <effect>
+                  <InnerShadow />
+               </effect></Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="104.0" layoutX="685.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+               <effect>
+                  <InnerShadow />
+               </effect></Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="373.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+               <effect>
+                  <InnerShadow />
+               </effect></Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="287.0" layoutX="484.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="403.0">
+               <effect>
+                  <InnerShadow />
+               </effect></Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="287.0" layoutX="58.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="397.0">
+               <effect>
+                  <InnerShadow />
+               </effect></Rectangle>
+            <PieChart fx:id="pieChart" layoutX="485.0" layoutY="162.0" legendVisible="false" prefHeight="281.0" prefWidth="400.0" />
+            <LineChart fx:id="LineChart" layoutX="59.0" layoutY="160.0" prefHeight="287.0" prefWidth="396.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="99.0" layoutX="59.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" width="209.0">
+               <effect>
+                  <InnerShadow />
+               </effect></Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="99.0" layoutX="676.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" width="209.0">
+               <effect>
+                  <InnerShadow />
+               </effect></Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="13.0" layoutX="-2.0" layoutY="618.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="980.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="620.0" layoutX="953.0" layoutY="-1.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="13.0" />
+            <Label layoutX="114.0" layoutY="25.0" prefHeight="26.0" prefWidth="92.0" text="Employees" textFill="#000dff">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="745.0" layoutY="25.0" prefHeight="26.0" prefWidth="80.0" text="Materials" textFill="#000dff">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="132.0" layoutY="480.0" prefHeight="26.0" prefWidth="63.0" text="Orders" textFill="#000dff">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="745.0" layoutY="480.0" prefHeight="26.0" prefWidth="75.0" text="Suppliers" textFill="#000dff">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmployees" layoutX="140.0" layoutY="57.0" prefHeight="56.0" prefWidth="46.0" text="30" textFill="#009774">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStocks" layoutX="444.0" layoutY="57.0" prefHeight="56.0" prefWidth="123.0" text="30" textFill="#9d00a8">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMaterials" layoutX="768.0" layoutY="57.0" prefHeight="56.0" prefWidth="46.0" text="10" textFill="#cca700">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOrders" layoutX="151.0" layoutY="511.0" prefHeight="56.0" prefWidth="32.0" text="1" textFill="RED">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSupplier" layoutX="769.0" layoutY="511.0" prefHeight="56.0" prefWidth="32.0" text=" 1" textFill="#009035">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="99.0" layoutX="364.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" width="209.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Rectangle>
+            <Label layoutX="407.0" layoutY="25.0" prefHeight="26.0" prefWidth="143.0" text="Available Stocks" textFill="#000dff">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStocks1" layoutX="453.0" layoutY="511.0" prefHeight="56.0" prefWidth="46.0" text="30" textFill="#9d00a8">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="386.0" layoutY="480.0" prefHeight="26.0" prefWidth="162.0" text="Increasing Number" textFill="#000dff">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02105e" height="696.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" width="237.0">
+         <effect>
+            <InnerShadow />
+         </effect></Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0055a4" height="614.0" layoutX="17.0" layoutY="65.0" opacity="0.34" stroke="BLACK" strokeType="INSIDE" width="200.0">
+         <effect>
+            <InnerShadow />
+         </effect></Rectangle>
+      <Button fx:id="btnEmployee" layoutX="53.0" layoutY="155.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="25.0" prefWidth="131.0" text="Employees">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnOrders" layoutX="52.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnOrdersOnAction" prefHeight="25.0" prefWidth="131.0" text="Orders">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnSuppliers" layoutX="53.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnSuppliersOnAction" prefHeight="25.0" prefWidth="131.0" text="Suppliers">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnBuyers" layoutX="54.0" layoutY="273.0" mnemonicParsing="false" onAction="#btnBuyersOnAction" prefHeight="25.0" prefWidth="131.0" text="Buyers">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnMaterials" layoutX="53.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnMaterialsOnAction" prefHeight="25.0" prefWidth="131.0" text="Materials">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnMachines" layoutX="53.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnMachinesOnAction" prefHeight="25.0" prefWidth="131.0" text="Machines">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReports" layoutX="52.0" layoutY="394.0" mnemonicParsing="false" onAction="#dailyReportOnAction" prefHeight="25.0" prefWidth="131.0" text="Daily Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnLogOut" layoutX="54.0" layoutY="621.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="31.0" prefWidth="85.0" text="Log Out">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnDashBoard" layoutX="52.0" layoutY="116.0" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="25.0" prefWidth="131.0" text="DashBoard">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="148.0" layoutY="621.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/images.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="63.0" layoutX="86.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/icons8-dash-66.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

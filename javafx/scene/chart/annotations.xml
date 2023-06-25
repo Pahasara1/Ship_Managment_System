@@ -1,0 +1,7 @@
+<root>
+    <item name='javafx.scene.chart.PieChart javafx.collections.ObservableList&lt;javafx.scene.chart.PieChart.Data&gt; getData()'>
+        <annotation name='org.jetbrains.annotations.Contract'>
+            <val name="pure" val="true"/>
+        </annotation>
+    </item>
+</root>
